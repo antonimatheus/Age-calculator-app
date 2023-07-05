@@ -127,11 +127,11 @@ input[type=number] {
 }
 
 #drequired, #mrequired, #yrequired {
-    display: none;
+    display: flex;
     flex-direction: column;
     font-size: 10px;
     margin: 5px 0px 5px 0px;
-    color: var(--LightRed);
+    color: transparent;
 }
 
 #contImg {
@@ -175,6 +175,7 @@ button {
     background: transparent;
     width: 90%;
     height: 90%;
+    cursor: pointer;
 }
 
 #res {

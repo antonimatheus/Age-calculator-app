@@ -16,12 +16,12 @@ function validDay() {
     if (day.value == 0 ) {
     day.style.borderColor = '#ff5757';
     dlabel.style.color = '#ff5757'
-    drequired.style.display = 'flex'
+    drequired.style.color = '#ff5757'
     return false
 } else {
     dlabel.style.color = '#854dff'
     day.style.borderColor = '#854dff';
-    drequired.style.display = 'none'
+    drequired.style.color = 'transparent'
     return true
 }
 }
@@ -30,12 +30,12 @@ function validMonth() {
     if (month.value == 0 ) {
     month.style.borderColor = '#ff5757';
     mlabel.style.color = '#ff5757'
-    mrequired.style.display = 'flex'
+    mrequired.style.color = '#ff5757'
     return false
 } else {
     mlabel.style.color = '#854dff'
     month.style.borderColor = '#854dff';
-    mrequired.style.display = 'none'
+    mrequired.style.color = 'transparent'
     return true
 }
 }
@@ -44,12 +44,12 @@ function validYear() {
     if (year.value == 0 ) {
     year.style.borderColor = '#ff5757';
     ylabel.style.color = '#ff5757'
-    yrequired.style.display = 'flex'
+    yrequired.style.color = '#ff5757'
     return false
 } else {
     ylabel.style.color = '#854dff'
     year.style.borderColor = '#854dff';
-    yrequired.style.display = 'none'
+    yrequired.style.color = 'transparent'
     return true
 }
 }
