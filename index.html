@@ -4,34 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
   
   <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header>
+  </header>
 
-  Day
-  DD
+  <main>
+    <div id="container">
+      <div id="date">
+        <div id="day">
+          <label for="iday" id="dlabel">Day</label>
+          <input type="number" name="day" id="iday" placeholder="DD">
+          <span id="drequired">This field is required</span>
+        </div>
 
-  Month
-  MM
+        <div id="month">
+          <label for="imonth" id="mlabel">Month</label>
+          <input type="number" name="day" id="imonth" placeholder="MM">
+          <span id="mrequired">This field is required</span>
+        </div>
 
-  Year
-  YYYY
+        <div id="year">
+          <label for="iyear"  id="ylabel">Year</label>
+          <input type="number" name="day" id="iyear" placeholder="YYYY">
+          <span id="yrequired">This field is required</span>
+        </div>
+      </div>
+      
+      <div id="contImg">
+        <div id="img">
+          <button id="btn" onclick="submit()">
+            <img src="assets/images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+      </div>
+      
+      <div id="res">
+        <div id="born">
+          <div class="resdate">
+            <p><span id="resday">--</span> years</p>
+          </div>
+          
+          <div class="resdate">
+            <p><span  id="resmonth">--</span> months</p>
+          </div>
 
-  -- years
-  -- months
-  -- days
+          <div class="resdate">
+            <p><span  id="resyear">--</span> days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+  </footer>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
