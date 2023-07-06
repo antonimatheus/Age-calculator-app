@@ -116,6 +116,11 @@ input {
     padding-left: 10px;
     outline: none;
     border: 1px solid var(--SmokeyGrey);
+    transition: all 1s;
+}
+
+input:focus {
+    border-color: var(--Purple);
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -167,6 +172,7 @@ input[type=number] {
 }
 
 #img:hover {
+    background-color: var(--OffBlack);
     transform: scale(1.10);
 }
 
@@ -227,7 +233,7 @@ button {
     }
 
     input {
-        width: 85px;
+        width: 90px;
         height: 40px;
     }
 

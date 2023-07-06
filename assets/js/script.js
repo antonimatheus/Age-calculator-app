@@ -54,14 +54,54 @@ function validYear() {
 }
 }
 
+function validTime() {
+/* Year */
+
+let newDate = new Date();
+let nYear = newDate.getFullYear();
+
+if (year.value > nYear) {
+    year.style.borderColor = '#ff5757';
+    ylabel.style.color = '#ff5757'
+    yrequired.style.color = '#ff5757'
+    yrequired.textContent = 'Must be in the past'
+}
+
+/* Month */
+
+if (month.value > 12) {
+    month.style.borderColor = '#ff5757'
+    mlabel.style.color = '#ff5757'
+    mrequired.textContent = 'Must be a valid month'
+    mrequired.style.color = '#ff5757'
+}
+
+/* Day */
+
+if (day.value > 31) {
+    day.style.borderColor = '#ff5757'
+    dlabel.style.color = '#ff5757'
+    drequired.textContent = 'Must be a valid day'
+    drequired.style.color = '#ff5757'
+}
+
+// to remove the zero!
+let monthValue = parseInt(month.value, 10);
+let dayValue = parseInt(day.value, 10);
+
+if (monthValue == 2 && dayValue > 29 || monthValue == 4 && dayValue > 30 || monthValue == 6 && dayValue > 30 || monthValue == 9 && dayValue > 30 || monthValue == 11 && dayValue > 30){
+    day.style.borderColor = '#ff5757'
+    dlabel.style.color = '#ff5757'
+    drequired.textContent = 'Must be a valid date'
+    drequired.style.color = '#ff5757'
+}
+}
+
 btn.addEventListener('click', function(event) {
-    event.preventDefault()
-    validDay()
-    validMonth()
-    validYear()
+    event.preventDefault();
+    validDay();
+    validMonth();
+    validYear();
+    validTime();
 })
-
-
-
-
 
