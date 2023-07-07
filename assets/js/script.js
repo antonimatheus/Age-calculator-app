@@ -97,11 +97,41 @@ if (monthValue == 2 && dayValue > 29 || monthValue == 4 && dayValue > 30 || mont
 }
 }
 
+function calculateTime() {
+    if (validYear() == true && validMonth() == true && validDay() == true && validTime() ) {//erro para corrigir!!!
+        let newDate = new Date();
+        let nYear = newDate.getFullYear();
+        let nMonth = newDate.getMonth() + 1;
+        let nDay = newDate.getDate();
+
+        if (validYear() == true) {
+            let age = nYear - year.value;
+            resyear.innerHTML = age;
+        }
+
+        if (validMonth() == true) {
+            let age = nMonth - month.value 
+            if (age < 0) {
+                age += 12
+            }
+            resmonth.innerHTML = age
+        }
+
+        if (validDay() == true) {
+            let age = nDay - day.value;
+            if (age < 0) {
+                age += 31;
+            }
+            resday.innerHTML = age;
+        }
+    }
+}
+
 btn.addEventListener('click', function(event) {
     event.preventDefault();
     validDay();
     validMonth();
     validYear();
     validTime();
+    calculateTime();
 })
-
