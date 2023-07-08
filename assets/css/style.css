@@ -75,7 +75,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 500px;
-    height:380px;
+    height:430px;
     border-radius: 20px 20px 130px 20px;
     background-color: var(--White);
 }
@@ -84,7 +84,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 430px;
-    height: 300px;
+    height: 330px;
     gap: 8px;
     /*background-color: red;*/
 }
